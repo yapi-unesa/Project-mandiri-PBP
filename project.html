@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <title>MY PROJECT</title>
+</head>
+  <body style="background-color: #fdfaf6;">
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg shadow-sm sticky-top" style="background-color: #4b2e15;">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning" href="index.html">Bati(k)u</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link text-warning fw-semibold" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- top bar -->
+<div class="container-fluid py-2 border-bottom bg-white">
+  <div class="container d-flex align-items-center justify-content-center position-relative">
+
+    <!-- pencarian -->
+    <div class="flex-grow-1" style="max-width: 600px;">
+      <div class="input-group">
+        <input type="text" class="form-control rounded-start-pill" placeholder="Cari produk..." aria-label="Cari produk">
+        <button class="btn btn-dark rounded-end-pill">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- ikon -->
+    <div class="position-absolute end-0 d-flex align-items-center gap-4 me-2">
+      <a href="#" class="text-dark text-decoration-none small">
+        <i class="bi bi-person"></i> Masuk / Daftar
+      </a>
+      <a href="#" class="text-dark fs-5"><i class="bi bi-heart"></i></a>
+      <a href="#" class="text-dark fs-5"><i class="bi bi-bag"></i></a>
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Konten -->
+  <div class="container-fluid mt-4">
+    <div class="row">
+<!-- filter -->
+<div class="col-md-3 mb-4">
+  <div class="filter-sidebar p-3 bg-white rounded shadow-sm border">
+
+    <div class="mb-4">
+      <h6 class="filter-title">JENIS KELAMIN</h6>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="lanang">
+        <label class="form-check-label" for="lanang">Pria</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="wedok">
+        <label class="form-check-label" for="wedok">Wanita</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="kids">
+        <label class="form-check-label" for="kids">Anak-anak</label>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="mb-4">
+      <h6 class="filter-title">SIZE</h6>
+      <div class="d-flex flex-wrap gap-2">
+        <button class="btn btn-outline-dark btn-sm size-btn">S</button>
+        <button class="btn btn-outline-dark btn-sm size-btn">M</button>
+        <button class="btn btn-outline-dark btn-sm size-btn">L</button>
+        <button class="btn btn-outline-dark btn-sm size-btn">XL</button>
+        <button class="btn btn-outline-dark btn-sm size-btn">XXL</button>
+      </div>
+    </div>
+
+    <hr>
+
+<!-- Warna -->
+<div class="mb-4">
+  <h6 class="filter-title">WARNA</h6>
+  <div class="color-options d-flex flex-wrap gap-2">
+    <button class="color-circle" style="background-color: #00ffff;"></button>
+    <button class="color-circle" style="background-color: #556b2f;"></button>
+    <button class="color-circle" style="background-color: #f7c6c7;"></button>
+    <button class="color-circle" style="background-color: #fdf5e6;"></button>
+    <button class="color-circle" style="background-color: #000000;"></button>
+    <button class="color-circle" style="background-color: #808080;"></button>
+    <button class="color-circle" style="background-color: #0000ff;"></button>
+    <button class="color-circle" style="background-color: #8b4513;"></button>
+    <button class="color-circle" style="background-color: #ff4500;"></button>
+    <button class="color-circle" style="background-color: #ff69b4;"></button>
+    <button class="color-circle" style="background-color: #c0c0c0;"></button>
+    <button class="color-circle" style="background-color: #ffff00;"></button>
+    <button class="color-circle" style="background-color: #9acd32;"></button>
+    <button class="color-circle" style="background-color: #a52a2a;"></button>
+    <button class="color-circle" style="background-color: #deb887;"></button>
+    <button class="color-circle" style="background-color: #6495ed;"></button>
+    <button class="color-circle" style="background-color: #8b0000;"></button>
+    <button class="color-circle" style="background-color: #daa520;"></button>
+    <button class="color-circle" style="background-color: #006400;"></button>
+    <button class="color-circle" style="background-color: #2f4f4f;"></button>
+  </div>
+</div>
+
+
+    <hr>
+
+    <!-- Harga -->
+    <div>
+      <h6 class="filter-title " id="filter-harga">HARGA</h6>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="price1" value="1">
+        <label class="form-check-label" for="price1">Dibawah Rp. 400.000</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="price2"value1="2">
+        <label class="form-check-label" for="price2">Rp. 400.000 - Rp. 700.000</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="price3" value="3">
+        <label class="form-check-label" for="price3">Rp. 700.000 - Rp. 1.000.000</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="price4" value="4">
+        <label class="form-check-label" for="price4">Di atas Rp. 1.000.000</label>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+       <!-- Konten Produk -->
+       <div class="col-md-9">
+        <div class="d-flex justify-content-center">
+
+          <img src="banner diskon.webp" class="img-fluid rounded shadow w-75" alt="Banner">
+        </div>
+         <main class="col-md-10 mx-auto p-4">
+           <div class="position-relative mb-4 text-center">
+    <div class="position-absolute top-50 start-50 translate-middle text-white">
+  </div>
+
+        <!-- Grid produk -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="fw-bold text-secondary">Semua Produk</h5>
+          <select class="form-select w-auto" id="sort">
+            <option value="Terbaru">Urutkan: Terbaru</option>
+            <option value="Terendah">Harga Terendah</option>
+            <option value="Tertinggi">Harga Tertinggi</option>
+          </select>
+        </div>
+
+         <div class="row row-cols-2 row-cols-md-4 g-4">
+          <div class="col-lg-2-4 col-md-4 col-sm-6 mb-4">
+                <div class="card product-card border-0 shadow-sm" data-bs-toggle="modal" data-bs-target="#productModal" style="cursor:pointer;">
+                  <div class="position-relative">
+                    <img src="batikk1.webp" class="card-img-top" alt="Batik Adyatma">
+                    <button class="btn btn-light btn-sm love-btn">
+                      <i class="bi bi-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-title mb-1 fw-bold">
+                      Batik Adyatma
+                    </h6>
+                    <p class="card-text text-muted small mb-2">
+                      Sarimbit Akasya Blue Kemeja Pria Koko Lengan Panjang
+                    </p>
+                    <p class="mb-0 text-danger fw-bold">
+                      Rp 259.000 
+                      <span class="text-muted text-decoration-line-through ms-2">Rp 799.800</span>
+                      <span class="text-danger ms-7">-68%</span>
+                    </p>
+                  </div>
+                </div>
+              </div> 
+
+              <!-- <div class="row row-cols-2 row-cols-md-4 g-4 produk-container">
+  <div class="col-lg-2-4 col-md-4 col-sm-6 mb-4 produk" data-harga="259000">
+    <div class="card product-card border-0 shadow-sm" style="cursor:pointer;">
+      <div class="position-relative">
+        <img src="batikk1.webp" class="card-img-top" alt="Batik Adyatma">
+        <button class="btn btn-light btn-sm love-btn position-absolute top-0 end-0 m-2">
+          <i class="bi bi-heart"></i>
+        </button>
+      </div>
+      <div class="card-body">
+        <h6 class="card-title mb-1 fw-bold">Batik Adyatma</h6>
+        <p class="card-text text-muted small mb-2">
+          Sarimbit Akasya Blue Kemeja Pria Koko Lengan Panjang
+        </p>
+        <p class="mb-0 text-danger fw-bold">
+          Rp 259.000 
+          <span class="text-muted text-decoration-line-through ms-2">Rp 799.800</span>
+          <span class="text-danger ms-7">-68%</span>
+        </p>
+      </div>
+    </div>
+  </div> -->
+
+            
+    <!-- modal detail produk -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content border-0 shadow">
+      <div class="modal-body p-4">
+        <div class="row g-4">
+          <!-- Galeri gambar -->
+          <div class="col-md-6 text-center">
+            <img id="mainProductImage" src="batikk1.webp" class="img-fluid rounded mb-3 shadow-sm" alt="Produk">
+            <div class="d-flex justify-content-center gap-2">
+              <img src="batikk1.webp" class="img-thumbnail gallery-thumb" style="width:80px; cursor:pointer;">
+              <img src="batikk1b.webp" class="img-thumbnail gallery-thumb" style="width:80px; cursor:pointer;">
+              <img src="batikk1c.webp" class="img-thumbnail gallery-thumb" style="width:80px; cursor:pointer;">
+            </div>
+          </div>
+
+          <!-- Detail produk -->
+          <div class="col-md-6">
+            <h4 class="fw-bold mb-1">Batik Adyatma</h4>
+            <p class="text-muted small mb-2">Kemeja Pria Lengan Panjang Motif Parang</p>
+            <h5 class="text-danger fw-bold">Rp 259.000 
+              <span class="text-muted text-decoration-line-through ms-2 small">Rp 799.000</span>
+              <span class="badge bg-danger ms-2">-68%</span>
+            </h5>
+
+            <hr>
+
+            <!-- Ukuran -->
+            <div class="mb-3">
+              <label class="fw-semibold mb-2">Ukuran:</label>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-outline-dark btn-sm size-btn">S</button>
+                <button class="btn btn-outline-dark btn-sm size-btn">M</button>
+                <button class="btn btn-outline-dark btn-sm size-btn">L</button>
+                <button class="btn btn-outline-dark btn-sm size-btn">XL</button>
+                <button class="btn btn-outline-dark btn-sm size-btn">XXL</button>
+              </div>
+            </div>
+
+            <!-- Kuantitas -->
+            <div class="mb-3">
+              <label class="fw-semibold mb-2">Kuantitas:</label>
+              <input type="number" class="form-control w-25" value="1" min="1">
+            </div>
+
+            <!-- Tombol aksi -->
+            <div class="d-flex gap-3 mb-4">
+              <button class="btn btn-outline-dark flex-fill add-to-cart-btn">
+                <i class="bi bi-bag-plus me-2"></i>Tambah ke Keranjang
+              </button>
+              <button class="btn btn-dark w-100 mt-3" onclick="beliSekarang('Batik Adyatma', 259000, 'batikk1.webp')">
+                <i class="bi bi-lightning-charge me-2"></i>Beli Sekarang
+              </button>
+            </div>
+
+            <!-- Notifikasi keranjang -->
+            <div id="cartAlert" class="alert alert-success small mt-2" style="display: none;">
+              ✅ Produk berhasil ditambahkan ke keranjang!
+            </div>
+
+            <hr>
+
+            <!-- Deskripsi Produk -->
+            <div class="product-description mt-3">
+              <h6 class="fw-bold text-uppercase text-secondary">Deskripsi Produk</h6>
+              <p class="text-muted small">
+                Batik Adyatma menghadirkan pesona klasik batik Nusantara dengan sentuhan modern. 
+                Dibuat dari bahan katun premium yang ringan dan nyaman, cocok untuk acara formal 
+                maupun kasual. Desain motif parang biru elegan memberi kesan berwibawa, 
+                sementara potongan slim fit memastikan tampilan tetap rapi dan stylish.
+              </p>
+              <ul class="text-muted small mb-2">
+                <li>Bahan: Katun Halus Premium</li>
+                <li>Motif: Parang Klasik Biru</li>
+                <li>Model: Lengan Panjang Slim Fit</li>
+                <li>Perawatan: Cuci dengan tangan atau dry clean</li>
+              </ul>
+            </div>
+
+            <hr>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          <!-- Produk 2 -->
+          <div class="col-lg-2-4 col-md-4 col-sm-6 mb-4">
+                <div class="card product-card border-0 shadow-sm">
+                  <div class="position-relative">
+                    <img src="batik1.webp" class="card-img-top" alt="Batik Adyatma">
+                    <button class="btn btn-light btn-sm love-btn">
+                      <i class="bi bi-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-title mb-1 fw-bold">
+                      Batik Aruna
+                    </h6>
+                    <p class="card-text text-muted small mb-2">
+                      Tampil elegan dengan corak batik tradisional yang memukau
+                    </p>
+                    <p class="mb-0 text-danger fw-bold">
+                      Rp 498.000 
+                      <span class="text-muted text-decoration-line-through ms-2">Rp 999.000</span>
+                      <span class="text-danger ms-7">-50%</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+          <!-- Produk 3 -->
+          <div class="col-lg-2-4 col-md-4 col-sm-6 mb-4">
+                <div class="card product-card border-0 shadow-sm">
+                  <div class="position-relative">
+                    <img src="batik2.webp" class="card-img-top" alt="Batik Adyatma">
+                    <button class="btn btn-light btn-sm love-btn">
+                      <i class="bi bi-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-title mb-1 fw-bold">
+                      Batik Dress laras
+                    </h6>
+                    <p class="card-text text-muted small mb-2">
+                      Dress batik modern dengan sentuhan klasik yang anggun
+                    </p>
+                    <p class="mb-0 text-danger fw-bold">
+                      Rp 582.790
+                      <span class="text-muted text-decoration-line-through ms-2">Rp 896.600</span>
+                      <span class="text-danger ms-7">-35%</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+          <!-- Produk 4 -->
+          <div class="col-lg-2-4 col-md-4 col-sm-6 mb-4">
+                <div class="card product-card border-0 shadow-sm">
+                  <div class="position-relative">
+                    <img src="batikk2.webp" class="card-img-top" alt="Batik Adyatma">
+                    <button class="btn btn-light btn-sm love-btn">
+                      <i class="bi bi-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-title mb-1 fw-bold">
+                      Batik Sagara Coklat
+                    </h6>
+                    <p class="card-text text-muted small mb-2">
+                      Elegan dan Maskulin dengan Sentuhan motif klasik
+                    </p>
+                    <p class="mb-0 text-danger fw-bold">
+                      Rp 659.000 
+                      <span class="text-muted text-decoration-line-through ms-2">Rp 899.800</span>
+                      <span class="text-danger ms-7">-68%</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+          <!-- Produk 5 -->
+          <div class="col-lg-2-4 col-md-4 col-sm-6 mb-4">
+                <div class="card product-card border-0 shadow-sm">
+                  <div class="position-relative">
+                    <img src="bati1.webp" class="card-img-top" alt="Batik Adyatma">
+                    <button class="btn btn-light btn-sm love-btn">
+                      <i class="bi bi-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-title mb-1 fw-bold">
+                      Batik Kirana
+                    </h6>
+                    <p class="card-text text-muted small mb-2">
+                      Sentuhan anggun batik tradisional untuk penampilan istimewa
+                    </p>
+                    <p class="mb-0 text-danger fw-bold">
+                      Rp 559.000 
+                      <span class="text-muted text-decoration-line-through ms-2">Rp 799.800</span>
+                      <span class="text-danger ms-7">-68%</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+          <!-- Produk 6 -->
+          <div class="col-lg-2-4 col-md-4 col-sm-6 mb-4">
+                <div class="card product-card border-0 shadow-sm">
+                  <div class="position-relative">
+                    <img src="batikkk3.webp" class="card-img-top" alt="Batik Adyatma">
+                    <button class="btn btn-light btn-sm love-btn">
+                      <i class="bi bi-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-title mb-1 fw-bold">
+                      Batik Pradana
+                    </h6>
+                    <p class="card-text text-muted small mb-2">
+                      Simple,berkelas dan cocok untuk segala acara
+                    </p>
+                    <p class="mb-0 text-danger fw-bold">
+                      Rp 200.000 
+                      <span class="text-muted text-decoration-line-through ms-2">Rp 799.800</span>
+                      <span class="text-danger ms-7">-68%</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+          <!-- Produk 7 -->
+          <div class="col-lg-2-4 col-md-4 col-sm-6 mb-4">
+                <div class="card product-card border-0 shadow-sm">
+                  <div class="position-relative">
+                    <img src="batik3.webp" class="card-img-top" alt="Batik Adyatma">
+                    <button class="btn btn-light btn-sm love-btn">
+                      <i class="bi bi-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-title mb-1 fw-bold">
+                      Batik Akasha Wanita
+                    </h6>
+                    <p class="card-text text-muted small mb-2">
+                      Tampil anggun dengan sentuhan batik yang nyaman digunakan
+                    </p>
+                    <p class="mb-0 text-danger fw-bold">
+                      Rp 789.000 
+                      <span class="text-muted text-decoration-line-through ms-2">Rp 899.800</span>
+                      <span class="text-danger ms-7">-10%</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+          <!-- Produk 8 -->
+                     <div class="col-lg-2-4 col-md-4 col-sm-6 mb-4">
+                <div class="card product-card border-0 shadow-sm">
+                  <div class="position-relative">
+                    <img src="bati2.webp" class="card-img-top" alt="Batik Adyatma">
+                    <button class="btn btn-light btn-sm love-btn">
+                      <i class="bi bi-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-title mb-1 fw-bold">
+                      Dharma Klasik
+                    </h6>
+                    <p class="card-text text-muted small mb-2">
+                      Kemeja Batik kids dengan desain klasik yang tak lekang oleh waktu
+                    </p>
+                    <p class="mb-0 text-danger fw-bold">
+                      Rp 259.000 
+                      <span class="text-muted text-decoration-line-through ms-2">Rp 799.800</span>
+                      <span class="text-danger ms-7">-48%</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- produk 9 -->
+                         <div class="col-lg-2-4 col-md-4 col-sm-6 mb-4">
+                <div class="card product-card border-0 shadow-sm">
+                  <div class="position-relative">
+                    <img src="batikk4.webp" class="card-img-top" alt="Batik Adyatma">
+                    <button class="btn btn-light btn-sm love-btn">
+                      <i class="bi bi-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-title mb-1 fw-bold">
+                      Nirmala Batik
+                    </h6>
+                    <p class="card-text text-muted small mb-2">
+                      Kemeja batik pria dengan motif menawa untuk penampilan istimewa
+                    </p>
+                    <p class="mb-0 text-danger fw-bold">
+                      Rp 259.000 
+                      <span class="text-muted text-decoration-line-through ms-2">Rp 799.800</span>
+                      <span class="text-danger ms-7">-68%</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </main>
+    </div>
+  </div>
+<!-- Pagination -->
+<div class="d-flex justify-content-center mt-5 mb-4">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+    </ul>
+  </nav>
+</div>
+
+<hr>
+  <!-- ====== FOOTER ====== -->
+  <footer class="mt-5 text-light pt-4" style="background-color:#3b2414;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold text-warning">Tentang Bati(k)u</h6>
+          <p class="small">Bati(k)u menghadirkan koleksi batik terbaik dari Mahasiswa UNESA dengan gaya modern yang elegan.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold text-warning">Bantuan</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="footer-link">Cara Belanja</a></li>
+            <li><a href="#" class="footer-link">Kebijakan Pengembalian</a></li>
+            <li><a href="#" class="footer-link">Ketentuan Pengguna</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold text-warning">Hubungi Kami</h6>
+          <p class="small mb-1">Email: info@batiku.id</p>
+          <p class="small">Instagram: @batiku.official</p>
+        </div>
+      </div>
+      <div class="text-center border-top pt-3 pb-2 small text-muted">
+        &copy; 2025 Bati(ku). Semua Hak Dilindungi.
+      </div>
+    </div>
+  </footer>
+
+<script src="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+<script src="project.js"></script>
+
+</body>
+</html>

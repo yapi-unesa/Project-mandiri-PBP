@@ -1,0 +1,65 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+}
+
+/* header */
+.contact-header {
+  background-color: #4b2e15;
+  color: #fff;
+  text-align: center;
+  padding: 60px 0 40px;
+}
+.contact-header h1 {
+  font-weight: 700;
+}
+
+/* kontak */
+.contact-section {
+  padding: 60px 0;
+}
+.contact-info {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 30px;
+  height: 100%;
+}
+.contact-info h5 {
+  color: #4b2e15;
+  font-weight: 600;
+}
+.contact-info p,
+.contact-info a {
+  color: #555;
+  text-decoration: none;
+}
+.contact-info a:hover {
+  color: #4b2e15;
+}
+.contact-form .form-control {
+  border-radius: 8px;
+  box-shadow: none;
+  border: 1px solid #ccc;
+}
+.btn-submit {
+  background-color: #4b2e15;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: none;
+  transition: 0.3s;
+}
+.btn-submit:hover {
+  background-color: #6d4323;
+}
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+}
+footer {
+  background-color: #4b2e15;
+  color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 60px;
+}

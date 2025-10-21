@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran - Bati(k)u</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<style>
+    body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.btn-dark {
+  transition: all 0.2s ease-in-out;
+}
+.btn-dark:hover {
+  transform: translateY(-2px);
+}
+
+#totalBayar {
+  color: #d10024;
+}
+
+</style>
+</head>
+
+<body class="bg-light">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg shadow-sm sticky-top bg-white">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-warning" href="index.html">Bati(k)u</a>
+  </div>
+</nav>
+
+<!-- CHECKOUT SECTION -->
+<section class="container my-5">
+  <div class="row g-4">
+    <!-- KIRI - Info Pengiriman -->
+    <div class="col-lg-7">
+      <div class="card shadow-sm border-0 p-4">
+        <h5 class="fw-bold mb-4">🧾 Informasi Pengiriman</h5>
+        <form id="checkoutForm">
+          <div class="mb-3">
+            <label class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Nomor Telepon</label>
+            <input type="tel" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Alamat Lengkap</label>
+            <textarea class="form-control" rows="3" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Metode Pengiriman</label>
+            <select class="form-select" required>
+              <option selected disabled>Pilih jasa pengiriman...</option>
+              <option value="jne">JNE Regular (2-4 Hari) - Rp 15.000</option>
+              <option value="j&t">J&T Express (1-3 Hari) - Rp 18.000</option>
+              <option value="gosend">GoSend Instant - Rp 25.000</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+
+<!-- Ringkasan -->
+<div class="col-lg-5">
+  <div class="card shadow-sm border-0 p-4">
+    <h5 class="fw-bold mb-4"><Ruby></Ruby>Ringkasan Pembayaran</h5>
+
+    <div id="produkRingkasan" class="d-flex align-items-center mb-3">
+      <img id="produkGambar" src="" alt="produk" width="80" class="rounded me-3">
+      <h6 id="produkNama" class="fw-bold mb-1">Nama Produk</h6>
+      <p id="produkHarga" class="text-danger fw-bold">Rp 0</p>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Metode Pembayaran</label>
+      <select id="pembayaran" class="form-select" required>
+        <option selected disabled>Pilih metode pembayaran...</option>
+        <option value="transfer">Transfer Bank</option>
+        <option value="ewallet">E-Wallet (Dana, OVO, Gopay)</option>
+        <option value="cod">Bayar di Tempat (COD)</option>
+      </select>
+    </div>
+
+    <div class="d-flex justify-content-between mb-2 text-muted">
+      <span>Biaya Pengiriman</span>
+      <span id="ongkir">Rp 0</span>
+    </div>
+    <hr>
+    <div class="d-flex justify-content-between fw-bold fs-5">
+      <span>Total Bayar</span>
+      <span id="totalBayar">Rp 0</span>
+    </div>
+    <button id="bayarBtn" class="btn btn-dark w-100 mt-4 py-2">
+      Bayar Sekarang
+    </button>
+  </div>
+</div>
+
+</section>
+
+<footer class="text-center py-3 bg-white border-top mt-5">
+  <small class="text-muted">© 2025 Bati(k)u. All rights reserved.</small>
+</footer>
+
+<script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+<script src="pemesanan.js"></script>
+</body>
+</html>
